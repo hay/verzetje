@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <!--
+                                            ___
+                                           /\_ \
+     __  __   _____   _ __   ___       ___ \//\ \
+    /\ \/\ \ /\ '__`\/\`'__\/ __`\   /' _ `\ \ \ \
+    \ \ \_/ |\ \ \L\ \ \ \//\ \L\ \__/\ \/\ \ \_\ \_
+     \ \___/  \ \ ,__/\ \_\\ \____/\_\ \_\ \_\/\____\
+      \/__/    \ \ \/  \/_/ \/___/\/_/\/_/\/_/\/____/
+                \ \_\
+                 \/_/
+
+    Kwaliteitsinternet sinds MCMXCIV!
+    Kwaliteitsinternet sinds 11111001010!
+    Kwaliteitsinternet sinds 0x7ca!
+    Kwaliteitsinternet sinds de wortel van 3976036!
+
+    (C) VPRO Digitaal, the Netherlands / http://digitaal.vpro.nl
+
+    -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Facebook tags -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://projects.haykranen.nl/verzetje/">
+    <meta property="og:image" content="http://projects.haykranen.nl/verzetje/img/thumb.jpg">
+    <meta property="og:site_name" content="Hay Kranen">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@hayify">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>verzetje</title>
+</head>
+<body>
+<body>
+    <main v-cloak>
+        <section class="screen home" v-show="screen === 'home'">
+            <div class="screen__content">
+                <h1 class="home__logo">verzetje</h1>
+
+                <p class="home__lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, corporis, veniam! Et dignissimos, eum, officia eveniet aperiam fuga officiis nihil modi porro voluptas, natus praesentium, magni eaque beatae possimus ducimus!</p>
+
+                <a href="#create" class="button buffer-bottom-3 button--big">
+                    Maak een verzetje
+                </a>
+
+                <h3>Recente verzetjes</h3>
+
+                <h3>Leer in verzet te komen</h3>
+            </div>
+        </section>
+
+        <section class="screen create" v-show="screen === 'create'">
+            <div class="screen__content">
+                <h2>Wat is je naam?</h2>
+                <h3>Een nepnaam is ok</h3>
+
+                <input type="text" class="create__input buffer-bottom-3" />
+
+                <h2>Schrijf de tekst van je verzetje</h2>
+                <h3>Wat wil je dat mensen gaan zeggen?</h3>
+
+                <textarea class="create__input"></textarea>
+
+                <a href="#record" class="button button--big">
+                    Verder
+                </a>
+            </div>
+        </section>
+
+        <section class="screen record" v-show="screen === 'record'">
+            <div class="screen__content">
+                <button class="button button--icon"
+                        v-show="!hasRecording"
+                        v-on:click="record">
+                    <i class="glyph glyph-clapboard"></i>
+                </button>
+
+                <video src=""
+                       v-show="hasRecording"
+                       class="record__video"
+                       controls></video>
+
+                <div v-show="!hasRecording">
+                    <h2>Neem nu je boodschap op</h2>
+                    <h3>Oefen de tekst goed</h3>
+                </div>
+
+                <div v-show="hasRecording">
+                    <button v-on:click="hasRecording = false"
+                            class="button button--big">
+                        Overnieuw
+                    </button>
+
+                    <a href="#ready" class="button button--big">
+                        Verder
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="screen ready" v-show="screen === 'ready'">
+            <div class="screen__content">
+                <div class="button button--icon">
+                    <i class="glyph glyph-check"></i>
+                </div>
+
+                <h2>Je verzetje is is aangemaakt en verloopt in</h2>
+
+                <time>TIJD</time>
+
+                <h2>Deel je verzetje</h2>
+
+                <div class="ready__share">
+                    <button class="button button--icon">
+                        <span>I</span>
+                    </button>
+
+                    <button class="button button--icon">
+                        <span>W</span>
+                    </button>
+
+                    <button class="button button--icon">
+                        <span>I</span>
+                    </button>
+                </div>
+
+                <a href="#home" class="button button--link">
+                    Nogmaals
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="bundle.js"></script>
+</body>
+</html>

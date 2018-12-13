@@ -1,0 +1,14 @@
+.create {
+    &__input {
+        font-size: 2rem;
+        border: 0;
+        border-bottom: 3px solid black;
+        width: 100%;
+        padding: 1rem;
+        outline: 0;
+    }
+
+    textarea {
+        height: 10rem;
+    }
+}

@@ -1,0 +1,10 @@
+.screen {
+    &__content {
+        @include child-margins(1rem);
+        @include flex-center;
+        max-width: 50rem;
+        @include margin-center;
+        width: 100%;
+        padding: 3rem 1rem;
+    }
+}

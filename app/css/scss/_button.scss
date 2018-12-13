@@ -1,0 +1,30 @@
+.button {
+    &--big {
+        background: $c-1;
+        color: white;
+        font-size: 2rem;
+        padding: 1.5rem 3rem;
+        display: inline-block;
+        font-weight: bold;
+        text-transform: lowercase;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    &--icon {
+        background: white;
+        border-radius: 8rem;
+        @include wh(8rem);
+        border: 1rem solid $c-1;
+        display: block;
+        padding: 0;
+        @include flex-center;
+    }
+
+    &--link,
+    &--link:hover {
+        text-decoration: underline;
+    }
+}

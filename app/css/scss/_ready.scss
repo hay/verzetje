@@ -1,0 +1,9 @@
+.ready {
+    &__share {
+        @include flex-center(row);
+    }
+
+    &__share > * {
+        margin: 0 1rem;
+    }
+}
