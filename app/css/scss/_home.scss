@@ -1,9 +1,9 @@
 .home {
-    &__logo {
-        width: 100%;
-    }
-
     &__lead {
         text-align: center;
+    }
+
+    .logo {
+        width: 80%
     }
 }
