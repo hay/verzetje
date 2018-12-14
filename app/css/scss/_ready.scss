@@ -3,7 +3,8 @@
         @include flex-center(row);
     }
 
-    &__share > * {
+    &__share > .button {
         margin: 0 1rem;
+        @include wh(4rem);
     }
 }

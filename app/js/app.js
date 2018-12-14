@@ -8,8 +8,16 @@ new Vue({
         this.go();
     },
 
+    computed : {
+        calltoaction() {
+            return `${this.name} vraagt je hulpt bij het volgende: "${this.resist}"`;
+        }
+    },
+
     data : {
         hasRecording : false,
+        name : null,
+        resist : null,
         screen : 'home'
     },
 

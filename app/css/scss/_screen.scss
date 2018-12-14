@@ -1,4 +1,14 @@
 .screen {
+    h3 {
+        text-align: center;
+    }
+
+    h4 {
+        text-align: left;
+        color: $c-2;
+        width: 100%;
+    }
+
     &__content {
         @include child-margins(1rem);
         @include flex-center;
@@ -6,5 +16,16 @@
         @include margin-center;
         width: 100%;
         padding: 3rem 1rem;
+    }
+
+    &__progress {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
+
+    &__progress strong {
+        background: $c-1;
+        color: white;
+        padding: .5rem;
     }
 }
