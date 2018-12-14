@@ -41,35 +41,53 @@
     <main v-cloak>
         <section class="screen home" v-show="screen === 'home'">
             <div class="screen__content">
-                <h1 class="home__logo">verzetje</h1>
+                <!-- <h1 class="home__logo">verzetje</h1> -->
+                <img src="img/logo.png" alt="Verzetje logo" class="home__logo" />
 
-                <p class="home__lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, corporis, veniam! Et dignissimos, eum, officia eveniet aperiam fuga officiis nihil modi porro voluptas, natus praesentium, magni eaque beatae possimus ducimus!</p>
+                <p class="home__lead">
+                    <strong>Wil je hulp om in actie te komen tegen je ouders?</strong> Wil je een revolutie in je huiskamer? Baal je van bepaald gedrag en wil je dat graag zeggen, maar weet je niet zo goed hoe?
+                    <br />
+                    <strong>Verzetje helpt je in actie te komen samen met je vrienden en familie!</strong>
+                </p>
 
                 <a href="#create" class="button buffer-bottom-3 button--big">
-                    Maak een verzetje
+                    Begin hier
                 </a>
 
+                <!--
                 <h3>Recente verzetjes</h3>
 
                 <h3>Leer in verzet te komen</h3>
+                -->
             </div>
         </section>
 
         <section class="screen create" v-show="screen === 'create'">
             <div class="screen__content">
-                <h2>Wat is je naam?</h2>
-                <h3>Een nepnaam is ok</h3>
+                <h2>
+                    1 / 3: Je naam
+                </h2>
+
+                <h3>Laten we simpel beginnen. Wat is je naam?</h3>
+                <h4>Een nepnaam is ok.</h4>
 
                 <input type="text" class="create__input buffer-bottom-3" />
 
-                <h2>Schrijf de tekst van je verzetje</h2>
-                <h3>Wat wil je dat mensen gaan zeggen?</h3>
+                <h2>
+                    2 / 3: Je verzet
+                </h2>
+
+                <h3>Waar wil je tegen in verzet komen?</h3>
+                <h4>
+                    Bijvoorbeeld: Milan wil...
+                </h4>
+                <ul>
+                    <li>dat zijn ouders minder vaak vliegen</li>
+                    <li>dat zijn vader lekkerder kookt</li>
+                    <li>dat zijn moedr stopt met roken</li>
+                </ul>
 
                 <textarea class="create__input"></textarea>
-
-                <a href="#record" class="button button--big">
-                    Verder
-                </a>
             </div>
         </section>
 
@@ -87,8 +105,9 @@
                        controls></video>
 
                 <div v-show="!hasRecording">
-                    <h2>Neem nu je boodschap op</h2>
-                    <h3>Oefen de tekst goed</h3>
+                    <h2>3 / 5 Neem nu je oproep op</h2>
+                    <h3>Vertel hier waar je verzetje over gaat en dat je steun nodig hebt.</h3>
+                    <h4>Bekijk de voorbeeldvideo</h4>
                 </div>
 
                 <div v-show="hasRecording">
@@ -104,13 +123,23 @@
             </div>
         </section>
 
+        <section>
+            <h3>4 / 5: Je oproep</h3>
+            <h4>Wat wil je dat mensen gaan zeggen?</h4>
+            <p>We hebben al iets voor je ingevuld. Pas het aan of laat het zo staan.</p>
+
+            <a href="#record" class="button button--big">
+                Verder
+            </a>
+        </section>
+
         <section class="screen ready" v-show="screen === 'ready'">
             <div class="screen__content">
                 <div class="button button--icon">
                     <i class="glyph glyph-check"></i>
                 </div>
 
-                <h2>Je verzetje is is aangemaakt en verloopt in</h2>
+                <h2>Je bent klaar! Je verzetje is is aangemaakt en verloopt in</h2>
 
                 <time>TIJD</time>
 
